@@ -5,9 +5,11 @@
 ### App Description
 When you tap the flashcard the question on the card displays the answer.
 
-### App Walk-though
+### App Walk-though 
 
-<img src="https://imgur.com/a/7v8RVOP"width=200><br>
+(https://imgur.com/a/7v8RVOP.gif)
+
+<img src="YOUR_GIF_URL_HERE" width=200><br>
 
 ## Required
 - [x] Create New Project ## Simple Flashcard App
