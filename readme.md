@@ -7,7 +7,7 @@ When you tap the flashcard the question on the card displays the answer.
 
 ### App Walk-though
 
-<img src="https://prnt.sc/Jq5-L9naGhDz" width=200><br>
+https://prnt.sc/Jq5-L9naGhDz
 
 
 ## Required
