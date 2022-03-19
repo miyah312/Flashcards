@@ -6,7 +6,7 @@ The flashcard app can now add new questions and answers and press cancel to retu
 
 ### App Walk-though
 
-<img src= https://imgur.com/a/NmMKgXx width=200><br>
+<img src=https://i.imgur.com/JSPRa8Y.gif width=200><br>
 
 ## Required
 - [x] User can open the creation screen
