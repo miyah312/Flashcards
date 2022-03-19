@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    var flashcardsController : ViewController!
+
+    
     @IBOutlet weak var answer: UILabel!
     @IBOutlet weak var question: UILabel!
     
@@ -21,5 +25,10 @@ class ViewController: UIViewController {
     }
     
     
-}
+    }
+    func updateFlashcard(question: String, answer: String) {
+        updateFlashcard(question: "text" , answer: "text")
+        
+    }
+   
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,12 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qL2-j8-sHS">
-                                <rect key="frame" x="73" y="348" width="269" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qL2-j8-sHS">
+                                <rect key="frame" x="73" y="348" width="268" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-Ru-71x">
-                                        <rect key="frame" x="0.0" y="0.0" width="269" height="201"/>
+                                        <rect key="frame" x="116.5" y="0.0" width="35" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.85410470360000001" green="0.89340813529999996" blue="0.94664899349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is 'Hello' in Spanish?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-Si-HM4">
-                                        <rect key="frame" x="0.0" y="0.0" width="269" height="201"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.94664899349999998" green="0.68777649659999995" blue="0.82537953379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
@@ -44,24 +43,125 @@
                                     <outletCollection property="gestureRecognizers" destination="DLJ-ON-u8f" appends="YES" id="eTC-Jx-mgG"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0p-e5-Hd5">
+                                <rect key="frame" x="153" y="657" width="108" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="Ja7-TD-LM1"/>
+                                </constraints>
+                                <color key="tintColor" red="0.94664899349999998" green="0.68777649659999995" blue="0.82537953379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+" buttonSize="medium">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="85"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOn:" destination="U6i-ER-17p" eventType="touchUpInside" id="3Nr-zK-VPw"/>
+                                    <action selector="didTaponCancel:" destination="U6i-ER-17p" eventType="touchUpInside" id="ZkC-TX-hPe"/>
+                                    <segue destination="Loz-aU-r0n" kind="presentation" id="EEZ-8U-DMF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qL2-j8-sHS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="304" id="5p6-Sp-tOY"/>
+                            <constraint firstItem="D0p-e5-Hd5" firstAttribute="centerX" secondItem="qL2-j8-sHS" secondAttribute="centerX" id="Efw-S8-14a"/>
+                            <constraint firstItem="D0p-e5-Hd5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G4s-cv-39a"/>
+                            <constraint firstItem="qL2-j8-sHS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LLa-6u-kyF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D0p-e5-Hd5" secondAttribute="bottom" constant="88" id="P4m-hf-578"/>
+                            <constraint firstItem="D0p-e5-Hd5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="wuN-FM-0ln"/>
+                            <constraint firstItem="qL2-j8-sHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="xGI-Nk-2C1"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xqe-17-dIV"/>
                     <connections>
                         <outlet property="answer" destination="4lZ-Ru-71x" id="GDA-wt-PPK"/>
                         <outlet property="question" destination="yXV-Si-HM4" id="ApG-Et-Ncs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="U6i-ER-17p" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="DLJ-ON-u8f">
                     <connections>
                         <action selector="didTaponFlashcard:" destination="BYZ-38-t0r" id="0XU-dn-mWE"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="J92-mL-9md">
+            <objects>
+                <viewController id="Mnf-wJ-io9" customClass="CreationViewController" customModule="Flashcards" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A14-Tf-duv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Question" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCt-aP-z8h">
+                                <rect key="frame" x="49" y="235" width="299" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.92388441889999995" blue="0.97628156649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="question:" destination="Mnf-wJ-io9" eventType="editingDidEnd" id="S6r-T0-tvN"/>
+                                    <action selector="questionText:" destination="k22-Bf-LPI" eventType="editingDidEnd" id="gwC-oN-qof"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Answer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G46-ro-Un2">
+                                <rect key="frame" x="49" y="318" width="299" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85410470360000001" green="0.89340813529999996" blue="0.94664899349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answer:" destination="Mnf-wJ-io9" eventType="editingDidEnd" id="fcv-zs-ExL"/>
+                                    <action selector="answerText:" destination="k22-Bf-LPI" eventType="editingDidEnd" id="zWs-1h-ePr"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HVJ-UB-KKZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="DZg-Lv-9zu">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="5CE-zz-zwP">
+                            <connections>
+                                <action selector="didTaponCancel:" destination="Mnf-wJ-io9" id="N70-PO-78Y"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Ohu-Z1-hYo">
+                            <connections>
+                                <action selector="didTaponDone:" destination="Mnf-wJ-io9" id="aZk-4P-MaW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziA-EL-ngU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="k22-Bf-LPI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qt6-oZ-qF5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Loz-aU-r0n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sim-5C-v2P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mnf-wJ-io9" kind="relationship" relationship="rootViewController" id="V8p-9w-axE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qc-F4-Xzi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="98"/>
         </scene>
     </scenes>
     <resources>
