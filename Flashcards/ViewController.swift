@@ -7,28 +7,49 @@
 
 import UIKit
 
+struct Flashcard {
+    var question: String
+    var answer: String
+}
+
 class ViewController: UIViewController {
-
     
-    var flashcardsController : ViewController!
-
+   
+    @IBOutlet weak var frontQuestionLabel: UILabel!
     
-    @IBOutlet weak var answer: UILabel!
-    @IBOutlet weak var question: UILabel!
+    @IBOutlet weak var backAnswerLabel: UILabel!
+    
+    var flashcards = [Flashcard]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func didTaponFlashcard(_ sender: Any) {question.isHidden = true
+    @IBAction func didTaponFlashcard(_ sender: Any)
+    
+    { frontQuestionLabel.isHidden = !frontQuestionLabel.isHidden
+    
     }
     
+func updateFlashcard(question: String, answer: String) {
     
-    }
-    func updateFlashcard(question: String, answer: String) {
-        updateFlashcard(question: "text" , answer: "text")
+    let flashcard = Flashcard (question: question, answer: answer)
+    frontQuestionLabel.text = flashcard.question
+    backAnswerLabel.text = flashcard.answer
+    
+    flashcards.append(flashcard)
         
     }
    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let navgationController = segue.destination as! UINavigationController
+        
+        let creationController = navgationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+        
+    }
 
+    }

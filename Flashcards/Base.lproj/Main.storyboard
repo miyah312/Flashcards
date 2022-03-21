@@ -20,7 +20,7 @@
                                 <rect key="frame" x="73" y="348" width="268" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-Ru-71x">
-                                        <rect key="frame" x="116.5" y="0.0" width="35" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.85410470360000001" green="0.89340813529999996" blue="0.94664899349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -75,8 +75,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xqe-17-dIV"/>
                     <connections>
-                        <outlet property="answer" destination="4lZ-Ru-71x" id="GDA-wt-PPK"/>
-                        <outlet property="question" destination="yXV-Si-HM4" id="ApG-Et-Ncs"/>
+                        <outlet property="backAnswerLabel" destination="4lZ-Ru-71x" id="RH6-Jw-OSd"/>
+                        <outlet property="frontQuestionLabel" destination="yXV-Si-HM4" id="ON1-St-ecZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,7 +105,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="question:" destination="Mnf-wJ-io9" eventType="editingDidEnd" id="S6r-T0-tvN"/>
                                     <action selector="questionText:" destination="k22-Bf-LPI" eventType="editingDidEnd" id="gwC-oN-qof"/>
                                 </connections>
                             </textField>
@@ -117,7 +116,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="answer:" destination="Mnf-wJ-io9" eventType="editingDidEnd" id="fcv-zs-ExL"/>
                                     <action selector="answerText:" destination="k22-Bf-LPI" eventType="editingDidEnd" id="zWs-1h-ePr"/>
                                 </connections>
                             </textField>
@@ -139,6 +137,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="answerEntered" destination="G46-ro-Un2" id="7Ez-7C-Gig"/>
+                        <outlet property="questionEntered" destination="nCt-aP-z8h" id="qjP-g5-njg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziA-EL-ngU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="k22-Bf-LPI" userLabel="Exit" sceneMemberID="exit"/>

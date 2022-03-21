@@ -9,30 +9,33 @@ import UIKit
 
 class CreationViewController: UIViewController {
     
+    var flashcardsController: ViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    let text = UITextField().self
-
+    
+    @IBOutlet weak var questionEntered: UITextField!
+    
+    
+    @IBOutlet weak var answerEntered: UITextField!
     
     @IBAction func didTaponCancel(_ sender: Any) {
         dismiss(animated: true)
     }
  
-    @IBAction func question(_ sender: Any) {
-    }
-    
-    
-    @IBAction func answer(_ sender: Any) {
-    }
-    
-
     @IBAction func didTaponDone(_ sender: Any) {
         
-       
+        let questionText = questionEntered.text
+        
+        let answerText = answerEntered.text
+        
+        flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+
+        dismiss(animated: true)
     }
     
     
