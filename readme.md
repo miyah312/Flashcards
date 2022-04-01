@@ -5,7 +5,7 @@ The flashcard app can now save flashcards and now has a next and previous button
 
 ### App Walk-though
 
-<img src= https://i.imgur.com/oBujlyg.gif width=200><br>
+<img src= https://i.imgur.com/9fpwbox.gif width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
