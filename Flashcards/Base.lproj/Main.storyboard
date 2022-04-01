@@ -43,20 +43,54 @@
                                     <outletCollection property="gestureRecognizers" destination="DLJ-ON-u8f" appends="YES" id="eTC-Jx-mgG"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0p-e5-Hd5">
-                                <rect key="frame" x="153" y="657" width="108" height="117"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0p-e5-Hd5">
+                                <rect key="frame" x="154" y="675" width="108" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="Ja7-TD-LM1"/>
                                 </constraints>
                                 <color key="tintColor" red="0.94664899349999998" green="0.68777649659999995" blue="0.82537953379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+" buttonSize="medium">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="85"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapOn:" destination="U6i-ER-17p" eventType="touchUpInside" id="3Nr-zK-VPw"/>
                                     <action selector="didTaponCancel:" destination="U6i-ER-17p" eventType="touchUpInside" id="ZkC-TX-hPe"/>
                                     <segue destination="Loz-aU-r0n" kind="presentation" id="EEZ-8U-DMF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-yl-hle">
+                                <rect key="frame" x="46" y="724" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Prev">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUe-eC-sfk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrP-pl-378">
+                                <rect key="frame" x="306" y="724" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Next">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlF-6S-FAq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,15 +109,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="xqe-17-dIV"/>
                     <connections>
-                        <outlet property="backAnswerLabel" destination="4lZ-Ru-71x" id="RH6-Jw-OSd"/>
-                        <outlet property="frontQuestionLabel" destination="yXV-Si-HM4" id="ON1-St-ecZ"/>
+                        <outlet property="backAnswerLabel" destination="4lZ-Ru-71x" id="kay-Gz-9xm"/>
+                        <outlet property="frontQuestionLabel" destination="yXV-Si-HM4" id="TWR-yg-XWH"/>
+                        <outlet property="nextButton" destination="qrP-pl-378" id="dhA-nR-cEZ"/>
+                        <outlet property="prevButton" destination="bw1-yl-hle" id="mRR-TA-228"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="U6i-ER-17p" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="DLJ-ON-u8f">
                     <connections>
-                        <action selector="didTaponFlashcard:" destination="BYZ-38-t0r" id="0XU-dn-mWE"/>
+                        <action selector="didTaponFlashcard:" destination="BYZ-38-t0r" id="Aem-Ax-Ti5"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -97,7 +133,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Question" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCt-aP-z8h">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCt-aP-z8h">
                                 <rect key="frame" x="49" y="235" width="299" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.92388441889999995" blue="0.97628156649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,10 +141,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="question:" destination="Mnf-wJ-io9" eventType="editingDidEnd" id="o3z-Ha-TSb"/>
                                     <action selector="questionText:" destination="k22-Bf-LPI" eventType="editingDidEnd" id="gwC-oN-qof"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Answer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G46-ro-Un2">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G46-ro-Un2">
                                 <rect key="frame" x="49" y="318" width="299" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.85410470360000001" green="0.89340813529999996" blue="0.94664899349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,6 +153,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="answer:" destination="Mnf-wJ-io9" eventType="editingDidEnd" id="2Ys-hI-VAV"/>
                                     <action selector="answerText:" destination="k22-Bf-LPI" eventType="editingDidEnd" id="zWs-1h-ePr"/>
                                 </connections>
                             </textField>
