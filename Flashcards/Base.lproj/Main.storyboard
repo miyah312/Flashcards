@@ -44,7 +44,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0p-e5-Hd5">
-                                <rect key="frame" x="154" y="675" width="108" height="117"/>
+                                <rect key="frame" x="153" y="682" width="108" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="Ja7-TD-LM1"/>
                                 </constraints>
@@ -59,11 +59,11 @@
                                     <segue destination="Loz-aU-r0n" kind="presentation" id="EEZ-8U-DMF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-yl-hle">
-                                <rect key="frame" x="46" y="724" width="62" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-yl-hle">
+                                <rect key="frame" x="73" y="701" width="73" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="arrowLeft">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Prev">
                                             <attributes>
@@ -71,24 +71,16 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                </buttonConfiguration>
+                                </state>
                                 <connections>
                                     <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUe-eC-sfk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrP-pl-378">
-                                <rect key="frame" x="306" y="724" width="62" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrP-pl-378">
+                                <rect key="frame" x="270" y="708" width="71" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Next">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="arrowRight"/>
                                 <connections>
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rlF-6S-FAq"/>
                                 </connections>
@@ -110,6 +102,7 @@
                     <navigationItem key="navigationItem" id="xqe-17-dIV"/>
                     <connections>
                         <outlet property="backAnswerLabel" destination="4lZ-Ru-71x" id="kay-Gz-9xm"/>
+                        <outlet property="card" destination="qL2-j8-sHS" id="V3q-Ia-q8e"/>
                         <outlet property="frontQuestionLabel" destination="yXV-Si-HM4" id="TWR-yg-XWH"/>
                         <outlet property="nextButton" destination="qrP-pl-378" id="dhA-nR-cEZ"/>
                         <outlet property="prevButton" destination="bw1-yl-hle" id="mRR-TA-228"/>
@@ -205,6 +198,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowLeft" width="64" height="64"/>
+        <image name="arrowRight" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
